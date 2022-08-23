@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather by City</title>
+  </head>
+  <body>
+
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Find</button>
+    </form>
+
+    <h1>City name: {{ city_info.city_name }}</h1>
+    <h1>Description: {{ city_info.description }}</h1>
+    <h1>Temperature: {{ city_info.temp_c }}</h1>
+    
+  </body>
+</html>
